@@ -25,23 +25,23 @@ help:
 pdf:
 	pandoc -s \
 	"$(INPUTDIR)"/*.md \
-	-o "$(OUTPUTDIR)/cv.pdf" \
+	-o "$(OUTPUTDIR)/COPD.pdf" \
 	--template="$(STYLEDIR)/template.tex" \
 	--latex-engine=xelatex
 
 tex:
 	pandoc -s \
 	"$(INPUTDIR)"/*.md \
-	-o "$(OUTPUTDIR)/cv.tex" \
+	-o "$(OUTPUTDIR)/COPD.tex" \
 	--template="$(STYLEDIR)/template.tex" \
 	--latex-engine=xelatex
 
 docx:
 	pandoc "$(INPUTDIR)"/*.md \
-	-o "$(OUTPUTDIR)/cv.docx" \
+	-o "$(OUTPUTDIR)/COPD.docx" \
 
 html:
 	pandoc "$(INPUTDIR)"/*.md \
-	-o "$(OUTPUTDIR)/cv.html"
+	-o "$(OUTPUTDIR)/COPD.html"
 
 .PHONY: help pdf docx html tex
